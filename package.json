@@ -5,8 +5,8 @@
   "main": "server.js",
   "author": "Roger Camps",
   "dependencies": {
-    "express": "latest",
-    "request": "latest",
-    "cheerio": "latest"
+    "cheerio": "latest",
+    "express": "^4.15.2",
+    "request": "latest"
   }
 }
