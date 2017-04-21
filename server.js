@@ -1,4 +1,4 @@
-vr express = require('express');
+var express = require('express');
 var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
@@ -11,9 +11,18 @@ app.get('/scrape', function(req, res){
 
   request(url, function(error, response, html){
     if(!error){
-      var $ cheerio.load(html);
+      var $ = cheerio.load(html);
       var picture;
       var json = {picture:""};
+
+      $('._nljxa').filter(function(){
+        var data = $(this);
+
+        picture = data
+
+        json.pitcure = picture;
+      })
+
     }
   })
 })
